@@ -1,0 +1,6 @@
+.red-color{
+    background-color: rgb(200, 0, 0);
+}
+.red-color :hover{
+    color: rgb(150, 0, 0);
+}
