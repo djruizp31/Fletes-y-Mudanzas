@@ -8,6 +8,10 @@
     color: #E50914;
 }
 
+.bg-dark-red{
+    background-color: #9b070f ;
+}
+
 
 .bg-yellow{
     background-color: #FFC300;
@@ -22,5 +26,5 @@
 }
 
 .text-lighter{
-    color:#CCC ;
+    color:#DDD;
 }
