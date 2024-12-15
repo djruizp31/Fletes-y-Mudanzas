@@ -2,8 +2,6 @@ const toggleButton = document.getElementById("themeButton");
 const moonIcon = document.getElementById("MoonIcon");
 const sunIcon = document.getElementById("SunIcon");
 
-const themeText = document.querySelectorAll(".ThemeText");
-
 const body = document.body;
 var DarkTheme = true;
 
