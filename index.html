@@ -296,37 +296,37 @@
 
             <div class="col-lg-5 bg-dark-red border rounded my-4 mx-auto py-3 px-4">
               <h4 class="text-light mb-3">Formulario de contacto</h4>
-              <form class="row ">
+              <form class="row " id="ContactForm">
                 <div class="col mt-auto">
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" placeholder="Nombre completo" required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
                     <label for="name">Nombre completo</label>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-5 mb-3">
                       <div class="form-floating">
-                        <input type="tel" class="form-control" id="tel" placeholder="name@email.com" required>
-                        <label for="tel">Télefono</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="name@email.com" required>
+                        <label for="phone">Télefono</label>
                       </div>
                     </div>
                     <div class="col mb-3">
                       <div class="form-floating">
-                        <input type="email" class="form-control" id="email" placeholder="name@email.com" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="name@email.com" required>
                         <label for="email">Correo</label>
                       </div>
                     </div>
                   </div>
 
                   <div class="form-floating mb-3">
-                    <textarea type="text" class="form-control" id="Description" placeholder="Description" style="height: 100px;" ></textarea>
-                    <label for="Description" style="white-space: normal !important;">Pequeña descripción del servicio</label>
+                    <textarea type="text" class="form-control" id="description" name="description" placeholder="Description" style="height: 100px;" ></textarea>
+                    <label for="description" style="white-space: normal !important;">Pequeña descripción del servicio</label>
                   </div>
 
                   <div class="row">
                     <div class="col-sm col-md-6 col-lg-12 col-xl-6 mb-3">
                       <div class="form-floating">
-                        <select class="form-select" id="origin" aria-label="Select destination" required>
+                        <select class="form-select" id="origin" name="origin" aria-label="Select destination" required>
                           <option selected disabled value="">Mostrar opciones</option>
                           <option value="1">Guadalajara</option>
                           <option value="2">Zapopan</option>
@@ -340,7 +340,7 @@
                     </div>
                     <div class="col-sm col-md-6 col-lg-12 col-xl-6 mb-3">
                       <div class="form-floating">
-                        <select class="form-select" id="destination" aria-label="Select destination" required>
+                        <select class="form-select" id="destination" name="destination" aria-label="Select destination" required>
                           <option selected disabled value="">Mostrar opciones</option>
                           <option value="1">Guadalajara</option>
                           <option value="2">Zapopan</option>
@@ -388,4 +388,6 @@
   </nav>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="ContactEmail.js"></script>
 </html>
