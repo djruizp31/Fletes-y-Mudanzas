@@ -1,102 +1,152 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fletes y Mudanzas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-<header class="sticky-md-top">
-  <nav class="navbar navbar-expand-md bg-dark-red border-bottom border-light">
-    <div class="container-fluid">
-      <a class="navbar-brand text-light" href="#">Fletes y Mudanzas</a>
-      <div>
-        <button class="btn btn-sm ms-auto" id="themeButton">
-          <span id="SunIcon" class=" clickable-link"><i data-feather="sun"></i></span>
-          
-          <span id="MoonIcon" class="d-none clickable-link text-light"><i data-feather="moon"></i></span>
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon "></span>
-        </button>
-      </div>
-      
-      <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-light clickable-link" aria-current="page" href="#Inicio">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light clickable-link" href="#Servicios">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light clickable-link" href="#Precios">Precios</a>
-          </li>
-          <!-- <li class="nav-item">
+  <header class="sticky-md-top">
+    <nav class="navbar navbar-expand-md bg-dark-red border-bottom border-light">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">Fletes y Mudanzas</a>
+        <div>
+          <button class="btn btn-sm ms-auto" id="themeButton">
+            <span id="SunIcon" class="clickable-link"
+              ><i data-feather="sun"></i
+            ></span>
+
+            <span id="MoonIcon" class="d-none clickable-link text-light"
+              ><i data-feather="moon"></i
+            ></span>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link text-light clickable-link"
+                aria-current="page"
+                href="#Inicio"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light clickable-link" href="#Servicios"
+                >Servicios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light clickable-link" href="#Precios"
+                >Precios</a
+              >
+            </li>
+            <!-- <li class="nav-item">
             <a class="nav-link text-light clickable-link" href="#">Quiénes somos</a>
           </li> -->
-          <li class="nav-item">
-            <a class="nav-link text-light clickable-link" href="#Cobertura">Cobertura</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light clickable-link" href="#Contacto">Contacto</a>
-          </li>
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link text-light clickable-link" href="#Cobertura"
+                >Cobertura</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light clickable-link" href="#Contacto"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
-<body class="">
-    <div class="container-lg rounded mt-4 p-3 text-center border bg-dark-red" id="Inicio">
+    </nav>
+  </header>
+  <body>
+    <div
+      class="container-lg rounded mt-4 p-3 text-center border bg-dark-red"
+      id="Inicio"
+    >
       <div class="row my-5 mx-2 pb-5 border-bottom">
         <h1 class="text-light">🚛 Fletes Rápidos y Seguros en Guadalajara</h1>
-        <h2 class="text-light">Tu mejor opción para mudanzas, entregas y transporte local al mejor precio.</h2>
+        <h2 class="text-light">
+          Tu mejor opción para mudanzas, entregas y transporte local al mejor
+          precio.
+        </h2>
       </div>
       <div class="row my-5 mx-2 pt-3 pb-5 border-bottom">
         <div class="col-sm-5 d-flex align-items-center justify-content-center">
           <h4 class="text-white">¿Por qué elegirnos?</h4>
         </div>
-        <div class="col text-start text-lighter ">
+        <div class="col text-start text-lighter">
           <p>
-            ⏱️ Puntualidad garantizada: Siempre a tiempo para cumplir con tus necesidades.<br>
-            💸 Precios justos: Tarifas claras y sin sorpresas.<br>
-            🧭 Cobertura en toda la Zona Metropolitana de Guadalajara . <br>
+            ⏱️ Puntualidad garantizada: Siempre a tiempo para cumplir con tus
+            necesidades.<br />
+            💸 Precios justos: Tarifas claras y sin sorpresas.<br />
+            🧭 Cobertura en toda la Zona Metropolitana de Guadalajara . <br />
             🙍‍♂️ Personal capacitado para manejar cualquier tipo de carga.
           </p>
         </div>
       </div>
-      <button class="btn btn-light btn-lg mb-4" id="contactBtn">📞 ¡Cotiza Ahora!</button>
+      <button class="btn btn-light btn-lg mb-4" id="contactBtn">
+        📞 ¡Cotiza Ahora!
+      </button>
     </div>
 
     <div class="container-lg mt-4 p-3 text-center border-top" id="Servicios">
       <div class="row mx-2 pt-3 pb-3">
-        <h2>Ofrecemos soluciones de transporte para todo tipo de necesidades</h2>
+        <h2>
+          Ofrecemos soluciones de transporte para todo tipo de necesidades
+        </h2>
       </div>
       <div class="row">
-        <p >En <strong>[Nombre de la empresa]</strong>, nos adaptamos a cualquier tipo de flete, ya sea una mudanza, entrega o transporte comercial. <br>
-            <strong>Estos son nuestros servicios:</strong></p>
+        <p>
+          En <strong>[Nombre de la empresa]</strong>, nos adaptamos a cualquier
+          tipo de flete, ya sea una mudanza, entrega o transporte comercial.
+          <br />
+          <strong>Estos son nuestros servicios:</strong>
+        </p>
       </div>
-      <div class="row mt-4 mx-2 pt-3 ">
-          
+      <div class="row mt-4 mx-2 pt-3">
         <div class="col-md text-light border rounded pt-4 m-2 bg-dark-red">
           <h5><strong>Mudanzas Residenciales:</strong></h5>
           <p>
-            Empaque, transporte y descarga de tus pertenencias de manera segura y eficiente.
-            Vehículos adecuados para tu hogar, sin importar el tamaño.
-            Servicio personalizado, adaptado a tus necesidades.</p>
+            Empaque, transporte y descarga de tus pertenencias de manera segura
+            y eficiente. Vehículos adecuados para tu hogar, sin importar el
+            tamaño. Servicio personalizado, adaptado a tus necesidades.
+          </p>
         </div>
         <div class="col-md text-light border rounded py-4 m-2 bg-dark-red">
           <h5><strong>Fletes Comerciales:</strong></h5>
           <p>
             Transporte de mercancías para empresas locales y mayoristas.
-            Entregas programadas y urgentes, con precios competitivos.
-            Carga y descarga profesional de productos.
+            Entregas programadas y urgentes, con precios competitivos. Carga y
+            descarga profesional de productos.
           </p>
         </div>
       </div>
@@ -107,39 +157,60 @@
         <h1>Precios</h1>
       </div>
       <div class="row">
-        <h3>Te ofrecemos tarifas claras, sin sorpresas. Elige el servicio que más se ajuste a tus necesidades.</h3>
+        <h3>
+          Te ofrecemos tarifas claras, sin sorpresas. Elige el servicio que más
+          se ajuste a tus necesidades.
+        </h3>
       </div>
       <div class="row justify-content-evenly">
         <div class="col-md-5 mt-4">
-          <ul class="list-group ">
+          <ul class="list-group">
             <li class="list-group-item bg-dark-red text-light">
               1. Mudanzas Residenciales:
             </li>
             <li class="list-group-item">Camioneta pequeña (hasta 500 kg):</li>
-            <li class="list-group-item">Tarifa básica: <strong>$XX por hora</strong>.</li>
-            <li class="list-group-item">Tarifa por distancia: <strong>$XX por cada 5 km adicionales</strong>.</li>
+            <li class="list-group-item">
+              Tarifa básica: <strong>$XX por hora</strong>.
+            </li>
+            <li class="list-group-item">
+              Tarifa por distancia:
+              <strong>$XX por cada 5 km adicionales</strong>.
+            </li>
           </ul>
         </div>
         <div class="col-md-5 mt-4">
-          <ul class="list-group ">
+          <ul class="list-group">
             <li class="list-group-item bg-dark-red text-light">
               2. Fletes Comerciales:
             </li>
             <li class="list-group-item">Camioneta pequeña (hasta 500 kg):</li>
-            <li class="list-group-item">Tarifa por carga: <strong>$XX</strong>.</li>
-            <li class="list-group-item">Tarifa por kilometraje: <strong>$XX por cada 5 km</strong>.</li>
+            <li class="list-group-item">
+              Tarifa por carga: <strong>$XX</strong>.
+            </li>
+            <li class="list-group-item">
+              Tarifa por kilometraje: <strong>$XX por cada 5 km</strong>.
+            </li>
           </ul>
         </div>
       </div>
       <div class="row mt-4 mx-2 pt-3 justify-content-center">
-        <p class="col-lg-6">Si tienes dudas o necesitas un presupuesto personalizado, contáctanos y con gusto te ayudaremos. Nuestro objetivo es brindarte la mejor opción, ajustada a tu presupuesto.</p>
+        <p class="col-lg-6">
+          Si tienes dudas o necesitas un presupuesto personalizado, contáctanos
+          y con gusto te ayudaremos. Nuestro objetivo es brindarte la mejor
+          opción, ajustada a tu presupuesto.
+        </p>
       </div>
     </div>
 
     <div class="container-lg mt-4 p-3 text-center border-top" id="Cobertura">
       <div class="row">
         <h2>📍 Cobertura en la Zona Metropolitana de Guadalajara</h2>
-        <p>Conocemos cada rincón de la ZMG. Nuestro servicio de fletes está disponible en las principales colonias, municipios y localidades para garantizar que tus necesidades de transporte sean cubiertas de manera eficiente.</p>
+        <p>
+          Conocemos cada rincón de la ZMG. Nuestro servicio de fletes está
+          disponible en las principales colonias, municipios y localidades para
+          garantizar que tus necesidades de transporte sean cubiertas de manera
+          eficiente.
+        </p>
         <p>Zonas disponibles:</p>
       </div>
       <div class="row justify-content-center">
@@ -147,11 +218,21 @@
           <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed bg-dark-red" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                <button
+                  class="accordion-button collapsed bg-dark-red"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
                   <span class="clickable-link static">Guadalajara</span>
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
                   <ul class="text-start">
                     <li>Centro Histórico</li>
@@ -165,11 +246,21 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
                   <span class="clickable-link static">Zapopan</span>
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
                   <ul class="text-start">
                     <li>Centro de Zapopan</li>
@@ -183,11 +274,21 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
                   <span class="clickable-link static">Tlaquepaque</span>
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapseThree"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
                   <ul class="text-start">
                     <li>San Pedro Tlaquepaque</li>
@@ -200,11 +301,23 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                  <span class="clickable-link static">Tlajomulco de Zúñiga</span>
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                  <span class="clickable-link static"
+                    >Tlajomulco de Zúñiga</span
+                  >
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapseFour"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
                   <ul class="text-start">
                     <li>López Mateos Sur</li>
@@ -217,11 +330,21 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
                   <span class="clickable-link static">Tonalá</span>
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapseFive"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
                   <ul class="text-start">
                     <li>Centro de Tonalá</li>
@@ -234,11 +357,21 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
                   <span class="clickable-link static">El Salto</span>
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapseSix"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
                   <ul class="text-start">
                     <li>Las Pintas</li>
@@ -254,116 +387,192 @@
           <div class="col-xl-6 col-sm-8">
             <p>Consulta tu zona aquí:</p>
             <div class="ratio ratio-4x3 border border-light">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59728.99851943146!2d-103.3737651691541!3d20.667039875989396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b18cb52fd39b%3A0xd63d9302bf865750!2sGuadalajara%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1734304703486!5m2!1ses-419!2smx"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59728.99851943146!2d-103.3737651691541!3d20.667039875989396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b18cb52fd39b%3A0xd63d9302bf865750!2sGuadalajara%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1734304703486!5m2!1ses-419!2smx"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-lg mt-4 p-3 border-top text-center" id="Contacto">
+      <div class="row ">
+        <h2>📞 Contáctanos Hoy Mismo</h2>
+        <h3>
+          Estamos aquí para resolver tus dudas y ayudarte con tus necesidades de
+          transporte.
+        </h3>
+      </div>
+      <div class="row">
+        <div
+          class="col-lg-6 text-light bg-dark-red border rounded my-4 py-3 px-5 mx-auto"
+        >
+          <h4>Información de contacto</h4>
+          <div class="row justify-content-center">
+            <div class="row my-3">
+              <div
+                class="col-md-8 col-lg border border-light rounded text-start p-3 mx-auto"
+              >
+                <strong>Teléfono:</strong>
+                <p style="margin: 0px">
+                  📱 Llama o envía un mensaje vía WhatsApp:
+                </p>
+                <a
+                  href="tel:+52 33 4389 8480"
+                  class="text-light link-underline-light link-offset-2 clickable-link"
+                  >+52 33 4389 8480</a
+                >
+              </div>
+            </div>
+            <div class="row my-3">
+              <div
+                class="col-md-8 col-lg border border-light rounded text-start p-3 mx-auto"
+              >
+                <strong>Correo Electrónico:</strong>
+                <p style="margin: 0px">
+                  📧 Escríbenos tus dudas o solicita una cotización:
+                </p>
+                <a
+                  href="mailto:+52 33 4389 8480"
+                  class="text-light link-underline-light link-offset-2 clickable-link"
+                  ><p class="m-0 text-break">Contacto@FletesMudanzas.com</p></a
+                >
+              </div>
+            </div>
+            <div class="row my-3">
+              <div
+                class="col-md-8 col-lg border border-light rounded text-start p-3 mx-auto"
+              >
+                <strong>Horarios de atención:</strong>
+                <p style="margin: 0px">
+                  Lunes a Viernes: 8:00 AM - 8:00 PM. <br />
+                  Sábado: 9:00 AM - 6:00 PM.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="container-lg mt-4 p-3 border-top" id="Contacto">
-          <div class="row">
-            <h2>📞 Contáctanos Hoy Mismo</h2>
-            <h3>Estamos aquí para resolver tus dudas y ayudarte con tus necesidades de transporte.</h3>
-          </div>
-          <div class="row">
-            <div class="col-lg-6 text-light bg-dark-red border rounded my-4 py-3 px-5 mx-auto">
-                <h4>Información de contacto</h4>
-                <div class="row justify-content-center">
-                  <div class="row my-3">
-                    <div class="col-md-8 col-lg border border-light rounded text-start p-3 mx-auto">
-                      <strong>Teléfono:</strong>
-                      <p style="margin: 0px;">📱 Llama o envía un mensaje vía WhatsApp:</p>
-                      <a href="tel:+52 33 4389 8480" class="text-light link-underline-light link-offset-2 clickable-link">+52 33 4389 8480</a>
-                    </div>
-                  </div>
-                  <div class="row my-3">
-                    <div class="col-md-8 col-lg border border-light rounded text-start p-3 mx-auto">
-                      <strong>Correo Electrónico:</strong>
-                      <p style="margin: 0px;">📧 Escríbenos tus dudas o solicita una cotización:</p>
-                      <a href="mailto:+52 33 4389 8480" class="text-light link-underline-light link-offset-2 clickable-link "><p class="m-0 text-break">Contacto@FletesMudanzas.com</p></a>
-                    </div>
-                  </div>
-                  <div class="row my-3">
-                    <div class="col-md-8 col-lg border border-light rounded text-start p-3 mx-auto">
-                      <strong>Horarios de atención:</strong>
-                      <p style="margin: 0px;">
-                        Lunes a Viernes: 8:00 AM - 8:00 PM. <br>
-                        Sábado: 9:00 AM - 6:00 PM.
-                      </p>
-                    </div>
+        <div class="col-lg-5 bg-dark-red border rounded my-4 mx-auto py-3 px-4">
+          <h4 class="text-light mb-3">Formulario de contacto</h4>
+          <form class="row" id="ContactForm">
+            <div class="col mt-auto">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre completo"
+                  required
+                />
+                <label for="name">Nombre completo</label>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-5 mb-3">
+                  <div class="form-floating">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      name="phone"
+                      placeholder="name@email.com"
+                      required
+                    />
+                    <label for="phone">Télefono</label>
                   </div>
                 </div>
-            </div>
-
-            <div class="col-lg-5 bg-dark-red border rounded my-4 mx-auto py-3 px-4">
-              <h4 class="text-light mb-3">Formulario de contacto</h4>
-              <form class="row " id="ContactForm">
-                <div class="col mt-auto">
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
-                    <label for="name">Nombre completo</label>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm-5 mb-3">
-                      <div class="form-floating">
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="name@email.com" required>
-                        <label for="phone">Télefono</label>
-                      </div>
-                    </div>
-                    <div class="col mb-3">
-                      <div class="form-floating">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="name@email.com" required>
-                        <label for="email">Correo</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-floating mb-3">
-                    <textarea type="text" class="form-control" id="description" name="description" placeholder="Description" style="height: 100px;" ></textarea>
-                    <label for="description" style="white-space: normal !important;">Pequeña descripción del servicio</label>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm col-md-6 col-lg-12 col-xl-6 mb-3">
-                      <div class="form-floating">
-                        <select class="form-select" id="origin" name="origin" aria-label="Select destination" required>
-                          <option selected disabled value="">Mostrar opciones</option>
-                          <option value="1">Guadalajara</option>
-                          <option value="2">Zapopan</option>
-                          <option value="3">Tlaquepaque</option>
-                          <option value="4">Tlajomulco de Zúñiga</option>
-                          <option value="5">Tonalá</option>
-                          <option value="6">El Salto</option>
-                        </select>
-                        <label for="origin">Origen</label>
-                      </div>
-                    </div>
-                    <div class="col-sm col-md-6 col-lg-12 col-xl-6 mb-3">
-                      <div class="form-floating">
-                        <select class="form-select" id="destination" name="destination" aria-label="Select destination" required>
-                          <option selected disabled value="">Mostrar opciones</option>
-                          <option value="1">Guadalajara</option>
-                          <option value="2">Zapopan</option>
-                          <option value="3">Tlaquepaque</option>
-                          <option value="4">Tlajomulco de Zúñiga</option>
-                          <option value="5">Tonalá</option>
-                          <option value="6">El Salto</option>
-                        </select>
-                        <label for="destination">Destino</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 col-md-4 col-6 mx-auto d-grid ">
-                      <button class="btn btn-dark themeColorButton py-2" type="submit">Enviar</button>
-                    </div>
+                <div class="col mb-3">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="name@email.com"
+                      required
+                    />
+                    <label for="email">Correo</label>
                   </div>
                 </div>
-              </form>
+              </div>
 
+              <div class="form-floating mb-3">
+                <textarea
+                  type="text"
+                  class="form-control"
+                  id="description"
+                  name="description"
+                  placeholder="Description"
+                  style="height: 100px"
+                ></textarea>
+                <label for="description" style="white-space: normal !important"
+                  >Pequeña descripción del servicio</label
+                >
+              </div>
 
+              <div class="row">
+                <div class="col-sm col-md-6 col-lg-12 col-xl-6 mb-3">
+                  <div class="form-floating">
+                    <select
+                      class="form-select"
+                      id="origin"
+                      name="origin"
+                      aria-label="Select destination"
+                      required
+                    >
+                      <option selected disabled value="">
+                        Mostrar opciones
+                      </option>
+                      <option value="1">Guadalajara</option>
+                      <option value="2">Zapopan</option>
+                      <option value="3">Tlaquepaque</option>
+                      <option value="4">Tlajomulco de Zúñiga</option>
+                      <option value="5">Tonalá</option>
+                      <option value="6">El Salto</option>
+                    </select>
+                    <label for="origin">Origen</label>
+                  </div>
+                </div>
+                <div class="col-sm col-md-6 col-lg-12 col-xl-6 mb-3">
+                  <div class="form-floating">
+                    <select
+                      class="form-select"
+                      id="destination"
+                      name="destination"
+                      aria-label="Select destination"
+                      required
+                    >
+                      <option selected disabled value="">
+                        Mostrar opciones
+                      </option>
+                      <option value="1">Guadalajara</option>
+                      <option value="2">Zapopan</option>
+                      <option value="3">Tlaquepaque</option>
+                      <option value="4">Tlajomulco de Zúñiga</option>
+                      <option value="5">Tonalá</option>
+                      <option value="6">El Salto</option>
+                    </select>
+                    <label for="destination">Destino</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-4 col-6 mx-auto d-grid">
+                  <button
+                    class="btn btn-dark themeColorButton py-2"
+                    type="submit"
+                  >
+                    Enviar
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -373,21 +582,25 @@
     <script>
       feather.replace();
     </script>
-</body>
-<footer>
-  <nav class="navbar navbar-expand-md bg-dark-red border-top border-light mt-4">
-    <div class="container-fluid">
-      <a class="navbar-brand text-light" href="#">Fletes y Mudanzas</a>
-      
-      <div class="justify-content-end " id="navbarNav">
-        <ul class="navbar-nav">
-          
-        </ul>
+  </body>
+  <footer>
+    <nav
+      class="navbar navbar-expand-md bg-dark-red border-top border-light mt-4"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">Fletes y Mudanzas</a>
+
+        <div class="justify-content-end" id="navbarNav">
+          <ul class="navbar-nav"></ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="js/ContactEmail.js"></script>
+    </nav>
+  </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/ContactEmail.js"></script>
 </html>
