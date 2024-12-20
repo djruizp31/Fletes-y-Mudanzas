@@ -76,24 +76,84 @@
         </h2>
       </div>
       <div class="row my-3 pt-3">
-        <div class="col-6 mx-auto" id="step1">
-            <h4 class="text-white mb-3">Ubicaciones</h4>
+        <div class="col-5 mx-auto step" id="step">
+            <h4 class="text-white mb-3">Direcciones</h4>
           <div class="row mb-4">
             <label for="postalCode1" class="form-label text-light">Codigo postal de origen</label>
-            <input class="form-control" type="number" name="postalCode1" id="postalCode1" required max="99999">
+            <input class="form-control postalInput" type="number" name="postalCode1" id="postalCode1" required max="99999" min="10000">
           </div>
           <div class="row mb-4">
-            <label for="postalCode1" class="form-label text-light">Codigo postal destino</label>
-            <input class="form-control" type="number" name="postalCode2" id="postalCode2" required max="99999">
+            <label for="postalCode2" class="form-label text-light">Codigo postal destino</label>
+            <input class="form-control postalInput" type="number" name="postalCode2" id="postalCode2"  required max="99999" min="10000">
           </div>
         </div>
+        <div class="col-5 mx-auto step d-none" id="step">
+          <h4 class="text-white mb-3">Medidas del paquete (cm)</h4>
+          <div class="row mb-4">
+            <label for="length" class="form-label text-light">Largo</label>
+            <input class="form-control measureInput" type="number" name="length" id="length" max="300">
+          </div>
+          <div class="row mb-4">
+            <label for="width" class="form-label text-light">Ancho</label>
+            <input class="form-control measureInput" type="number" name="width" id="width" max="300">
+          </div>
+          <div class="row mb-4">
+            <label for="height" class="form-label text-light">Alto</label>
+            <input class="form-control measureInput" type="number" name="height" id="heigth" max="300">
+          </div>
+          <div class="row mb-4">
+            <label for="weight" class="form-label text-light">Peso (kg)</label>
+            <input class="form-control measureInput" type="number" name="weight" id="weight" >
+          </div>
+        </div>
+        <div class="col-5 mx-auto step d-none">
+          <h4 class="text-light mb-3">Resumen:</h4>
+          <table class="table table-striped text-start table-bordered">
+            <thead>
+              <tr>
+                <th colspan="2">Direcciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Codigo postal de origen</td>
+                <td class="dataText"></th>
+              </tr>
+              <tr>
+                <td>Codigo postal destino</td>
+                <td class="dataText"></td>
+              </tr>
+              <tr>
+                <th colspan="2">Medidas del paquete</th>
+              </tr>
+              <tr>
+                <td class="">Largo</td>
+                <td class="dataText">cm</td>
+              </tr>
+              <tr>
+                <td>Ancho</td>
+                <td class="dataText">cm</td>
+              </tr>
+              <tr>
+                <td>Alto</td>
+                <td class="dataText">cm</td>
+              </tr>
+              <tr>
+                <td>Peso</td>
+                <td class="dataText">kg</td>
+              </tr>
+            </tbody>
+            
+          </table>
+        </div>
       </div>
+      <button class="btn btn-light btn-lg mb-4 d-none" id="backStepButton">
+        Regresar
+      </button>
       <button class="btn btn-light btn-lg mb-4" id="nextStepButton">
         Siguiente
       </button>
-      <button class="btn btn-light btn-lg mb-4" id="calculateButton">
-        Calcular
-      </button>
+      
     </div> 
 </body>
 
