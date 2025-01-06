@@ -1,11 +1,11 @@
 const apiKey = "305cef8240f248a0a0d4a166ffc29826";
 
 async function getCoordinates(postalCode) {
-const response = await fetch(
-    `https://api.opencagedata.com/geocode/v1/json?q=${postalCode}&key=${apiKey}&countrycode=mx`
-);
-const data = await response.json();
-return data.results[0].geometry; 
+    const response = await fetch(
+        `https://api.opencagedata.com/geocode/v1/json?q=${postalCode}&key=${apiKey}&countrycode=mx`
+    );
+    const data = await response.json();
+    return data.results[0].geometry; 
 }
   
 async function calculateDistance(postalCode1, postalCode2) {
@@ -71,7 +71,7 @@ backStepButton.addEventListener("click", ()=>{
         updateForm();
     }
     if(currentStep == 0){
-        backStepButton.classList.add("d-none")
+        updateBackStepButton(false);
     }
 })
 
@@ -79,35 +79,36 @@ nextStepButton.addEventListener("click", () => {
     currentStep++
     console.log(currentStep)
     switch(currentStep){
-        case 0:
-            backStepButton.classList.add("d-none");
+        case 0: 
+            updateBackStepButton("hide");
             break
-        case 1:
-            backStepButton.classList.remove("d-none")
+        case 1: //Postal Codes Step
+            updateBackStepButton("show");
             if(postalInputs[0].value && postalInputs[1].value){
                 updatePostalCodes();
             }else{
                 console.log("Postal codes not registered")
                 alert("Postal codes not registered")
                 currentStep--
-                backStepButton.classList.add("d-none");
+                updateBackStepButton("hide");
             }
             break
-        case 2:
+        case 2: //Measures Step
             if(measureInputs[0].value && measureInputs[1].value && measureInputs[2].value){
                 updateMeasures();
             }else{
                 console.log("Measures not registered")
                 alert("Measures not registered")
                 currentStep--
-                backStepButton.classList.add("d-none");
             }
             updateSummaryData();
             break
         case 3:
             priceCalc();
-            nextStepButton.classList.add("d-none");
-            backStepButton.classList.add("d-none");
+
+            updateNextStepButton("hide");
+            updateBackStepButton("hide");
+
             break
     }
     
@@ -115,7 +116,6 @@ nextStepButton.addEventListener("click", () => {
 })
 
 function updateForm(){
-    
     if(currentStep <= maxStep){
         steps.forEach((step, index) => {
             if(currentStep == (index)){
@@ -127,13 +127,33 @@ function updateForm(){
         });
         console.log("Form updated")
     }
+    updateNextStepButton();
+}
+
+function updateNextStepButton(state){
     if(currentStep == 2){
         nextStepButton.textContent = "Calcular"
     }
     else{
         nextStepButton.textContent = "Siguiente"
     }
+
+    if(state == "show"){
+        nextStepButton.classList.remove("d-none");
+    }
+    else if(state == "hide"){
+        nextStepButton.classList.add("d-none");
+    }
 }
+function updateBackStepButton(state){
+    if(state == "show"){
+        backStepButton.classList.remove("d-none");
+    }
+    else{
+        backStepButton.classList.add("d-none");
+    }
+}
+
 function updatePostalCodes(){
     data.postalCode1 = postalInputs[0].value
     data.postalCode2 = postalInputs[1].value
