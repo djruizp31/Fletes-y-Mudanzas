@@ -35,6 +35,7 @@ return haversine(coords1.lat, coords1.lng, coords2.lat, coords2.lng).toFixed(2);
     
 const nextStepButton = document.getElementById("nextStepButton");
 const backStepButton = document.getElementById("backStepButton");
+const calculateAgainButton = document.getElementById("calculateAgainButton");
 
 const steps = document.querySelectorAll(".step")
 
@@ -108,11 +109,14 @@ nextStepButton.addEventListener("click", () => {
 
             updateNextStepButton("hide");
             updateBackStepButton("hide");
-
+            updateCalculateAgainButton("show");
             break
     }
     
     
+})
+calculateAgainButton.addEventListener("click", () =>{
+    location.reload();
 })
 
 function updateForm(){
@@ -153,6 +157,14 @@ function updateBackStepButton(state){
         backStepButton.classList.add("d-none");
     }
 }
+function updateCalculateAgainButton(state){
+    if(state == "show"){
+        calculateAgainButton.classList.remove("d-none");
+    }
+    else{
+        calculateAgainButton.classList.add("d-none");
+    }
+}
 
 function updatePostalCodes(){
     data.postalCode1 = postalInputs[0].value
@@ -166,13 +178,12 @@ function updateMeasures(){
     data.weightKg = measureInputs[3].value
     updateForm();
 }
-
 function updateSummaryData(){
     const values = Object.values(data);
     console.log("Summary data updated")
     console.log(dataTexts);
     dataTexts.forEach((text, index)=>{
-        text.textContent = values[index] + text.textContent;
+        text.textContent = values[index];
     })
 }
 

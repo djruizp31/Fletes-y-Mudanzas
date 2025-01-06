@@ -155,36 +155,40 @@
           <table class="table table-striped text-start table-bordered">
             <thead>
               <tr>
-                <th colspan="2">Direcciones</th>
+                <th colspan="3">Direcciones</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Codigo postal de origen</td>
-                <td class="dataText"></td>
+                <td class="dataText text-center" colspan="2">XXXXX</td>
               </tr>
               <tr>
                 <td>Codigo postal destino</td>
-                <td class="dataText"></td>
+                <td class="dataText text-center" colspan="2">XXXXX</td>
               </tr>
               <tr>
-                <th colspan="2">Medidas del paquete</th>
+                <th colspan="3">Medidas del paquete</th>
               </tr>
               <tr>
                 <td class="">Largo</td>
-                <td class="dataText">cm</td>
+                <td class="dataText text-end">XX</td>
+                <td>cm</td>
               </tr>
               <tr>
                 <td>Ancho</td>
-                <td class="dataText">cm</td>
+                <td class="dataText text-end">XX</td>
+                <td>cm</td>
               </tr>
               <tr>
                 <td>Alto</td>
-                <td class="dataText">cm</td>
+                <td class="dataText text-end">XX</td>
+                <td>cm</td>
               </tr>
               <tr>
                 <td>Peso</td>
-                <td class="dataText">kg</td>
+                <td class="dataText text-end">XX</td>
+                <td>kg</td>
               </tr>
             </tbody>
           </table>
@@ -212,6 +216,9 @@
           </button>
           <button class="btn btn-light btn-lg mb-4" id="nextStepButton">
             Siguiente
+          </button>
+          <button class="btn btn-light btn-lg mb-4 d-none" id="calculateAgainButton">
+            Calcular otro paquete
           </button>
         </div>
       </div>
