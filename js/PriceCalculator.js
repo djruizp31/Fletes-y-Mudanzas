@@ -1,33 +1,39 @@
 const apiKey = "305cef8240f248a0a0d4a166ffc29826";
 
 async function getCoordinates(postalCode) {
-    const response = await fetch(
-        `https://api.opencagedata.com/geocode/v1/json?q=${postalCode}&key=${apiKey}&countrycode=mx`
-    );
-    const data = await response.json();
-    return data.results[0].geometry; 
+    try{
+        const response = await fetch(
+            `https://api.opencagedata.com/geocode/v1/json?q=${postalCode}&key=${apiKey}&countrycode=mx`
+        );
+        const data = await response.json();
+        return data.results[0].geometry; 
+    }
+    catch(error){
+        location.reload();
+        alert("Error al encontrar los codigos postales");
+    }
 }
   
 async function calculateDistance(postalCode1, postalCode2) {
-const coords1 = await getCoordinates(postalCode1);
-const coords2 = await getCoordinates(postalCode2);
+    const coords1 = await getCoordinates(postalCode1);
+    const coords2 = await getCoordinates(postalCode2);
 
-const haversine = (lat1, lon1, lat2, lon2) => {
-    const R = 6371; // Radio de la Tierra en km
-    const toRad = angle => (angle * Math.PI) / 180;
+    const haversine = (lat1, lon1, lat2, lon2) => {
+        const R = 6371; // Radio de la Tierra en km
+        const toRad = angle => (angle * Math.PI) / 180;
 
-    const dLat = toRad(lat2 - lat1);
-    const dLon = toRad(lon2 - lon1);
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
 
-    const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+        const a =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
 
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; 
-};
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c; 
+    };
 
-return haversine(coords1.lat, coords1.lng, coords2.lat, coords2.lng).toFixed(2);
+    return haversine(coords1.lat, coords1.lng, coords2.lat, coords2.lng).toFixed(2);
 }
 
 
@@ -54,7 +60,6 @@ var data = {
     lengthCm:0,
     widthCm:0,
     heightCm:0,
-    
     weightKg: 0,
 
     distance: 0,
@@ -83,7 +88,7 @@ nextStepButton.addEventListener("click", () => {
         case 0: 
             updateBackStepButton("hide");
             break
-        case 1: //Postal Codes Step
+        case 1: 
             updateBackStepButton("show");
             if(postalInputs[0].value && postalInputs[1].value){
                 updatePostalCodes();
@@ -94,7 +99,7 @@ nextStepButton.addEventListener("click", () => {
                 updateBackStepButton("hide");
             }
             break
-        case 2: //Measures Step
+        case 2: 
             if(measureInputs[0].value && measureInputs[1].value && measureInputs[2].value){
                 updateMeasures();
             }else{
@@ -153,15 +158,16 @@ function updateBackStepButton(state){
     if(state == "show"){
         backStepButton.classList.remove("d-none");
     }
-    else{
+    else if(state == "hide"){
         backStepButton.classList.add("d-none");
     }
 }
+
 function updateCalculateAgainButton(state){
     if(state == "show"){
         calculateAgainButton.classList.remove("d-none");
     }
-    else{
+    else if(state == "hide"){
         calculateAgainButton.classList.add("d-none");
     }
 }
